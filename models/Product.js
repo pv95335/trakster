@@ -20,13 +20,13 @@ post_content: {
     allowNull: false
 },
 price: {
-    type: Number,
+    type: DataTypes.NUMBER,
     required: true
 },
 //zip code
 area: {
-    type: Number,
-    reuired: true
+    type: DataTypes.NUMBER,
+    required: true
 },
 user_id: {
     type: DataTypes.INTEGER,

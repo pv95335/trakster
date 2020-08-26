@@ -59,4 +59,4 @@ class User extends Model {
         module.exports = User;
 
 
-// User Tables: User Id, Username, Password, Email
+// User Tables:id, username, email, password
