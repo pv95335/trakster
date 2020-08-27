@@ -1,5 +1,5 @@
 DROP DATABASE IF EXISTS trakster;
-CREATE DATABASE traskster;
+CREATE DATABASE trakster;
 
 -- User Tables:id, username, email, password
 -- Comment table: id, comment_text, user_id, post_id
@@ -15,9 +15,11 @@ CREATE TABLE User (
 CREATE TABLE Product (
     id INT NOT NULL PRIMARY KEY,
     title VARCHAR(30) NOT NULL,
-    post_content TEXT NOT NULL,
-    price NUMERIC REQUIRED,
-    area NUMERIC REQUIRED
+    post_content TEXT,
+    price NUMERIC,
+    post_type VARCHAR(30) NOT NULL,
+    area NUMERIC,
+    user_id INT NOT NULL,
 INDEX user_id (user_id),
 CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE 
 );
@@ -28,7 +30,7 @@ comment_text TEXT NOT NULL,
 user_id INT NOT NULL,
 INDEX user_id (user_id),
 CONSTRAINT fk_user1 FOREIGN KEY (user_id) REFERENCES User(id) ON DELETE CASCADE, 
-post_id INT NOT NULL,
-INDEX post_id (post_id),
-CONSTRAINT fk_post FOREIGN KEY (post_id) REFERENCES post(id) ON DELETE CASCADE 
+product_id INT NOT NULL,
+INDEX product_id (product_id),
+CONSTRAINT fk_product FOREIGN KEY (product_id) REFERENCES product(id) ON DELETE CASCADE 
 );
