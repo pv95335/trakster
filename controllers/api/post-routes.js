@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { Product, User, Comment } = require('../../models');
+const { Post, User, Comment } = require('../../models');
 const sequelize = require('../../config/connections');
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
-    Product.findAll({
+    Post.findAll({
         attributes: [
             'id',
             'title',
@@ -12,14 +12,14 @@ router.get('/', (req, res) => {
             'post_content',
             'price',
             'created_at',
-            'post_type',
-            'user_id'
+            'post_type'
+            
         ],
         order: [['created_at', 'DESC']],
         include: [
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'user_id'],
+                attributes: ['id', 'comment_text', 'user_id', 'created_at'],
                 include: {
                     model: User,
                     attributes: ['username', 'email']
@@ -37,8 +37,9 @@ router.get('/', (req, res) => {
             res.status(500).json(err);
         });
 });
+//one post
 router.get('/:id', (req, res) => {
-    Product.findOne({
+    Post.findOne({
         where: {
             id: req.params.id
         },
@@ -49,13 +50,13 @@ router.get('/:id', (req, res) => {
             'post_content',
             'price',
             'created_at',
-            'post_type',
-            'user_id'
+            'post_type'
+        
         ],
         include: [
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'user_id'],
+                attributes: ['id', 'comment_text', 'user_id', 'created_at'],
                 include: {
                     model: User,
                     attributes: ['username', 'email']
@@ -82,7 +83,7 @@ router.get('/:id', (req, res) => {
   
   router.post('/', withAuth, (req, res) => {
  
-    Product.create({
+    Post.create({
       title: req.body.title,
       post_content: req.body.post_content,
       area: req.body.area,
@@ -96,7 +97,7 @@ router.get('/:id', (req, res) => {
       });
   });
   router.put('/:id', withAuth, (req, res) => {
-    Product.update(
+    Post.update(
       {
         title: req.body.title,
         post_content: req.body.post_content,
@@ -122,7 +123,7 @@ router.get('/:id', (req, res) => {
       });
   });
   router.delete('/:id', withAuth, (req, res) => {
-    Product.destroy({
+    Post.destroy({
       where: {
         id: req.params.id
       }

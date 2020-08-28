@@ -1,6 +1,6 @@
-const User = require('./User');
-const Product = require('./Product');
-const Comment = require('./Comment');
+const User = require('./user');
+const Product = require('./product');
+const Comment = require('./comment');
 const { exit } = require('process');
 
 User.hasMany(Product);
