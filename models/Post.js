@@ -23,7 +23,7 @@ Post.init(
           post_content: {
             type: DataTypes.TEXT
             },
-            post_type: {
+          post_type: {
                 type: DataTypes.STRING,
                 allowNull: false
             },
