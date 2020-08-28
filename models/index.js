@@ -1,18 +1,18 @@
-const User = require('./user');
-const Product = require('./product');
-const Comment = require('./comment');
+const User = require('./User');
+const Post = require('./post');
+const Comment = require('./Comment');
 const { exit } = require('process');
 
-User.hasMany(Product);
+User.hasMany(Post);
 
-Product.belongsTo(User);
+Post.belongsTo(User);
 
 Comment.belongsTo(User);
 
-Comment.belongsTo(Product);
+Comment.belongsTo(Post);
 
 User.hasMany(Comment);
 
-Product.hasMany(Comment);
+Post.hasMany(Comment);
 
-module.exports = { User, Product, Comment };
+module.exports = { User, Post, Comment };

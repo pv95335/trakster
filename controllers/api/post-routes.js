@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
             'price',
             'created_at',
             'post_type'
-            
+
         ],
         order: [['created_at', 'DESC']],
         include: [
@@ -51,7 +51,7 @@ router.get('/:id', (req, res) => {
             'price',
             'created_at',
             'post_type'
-        
+
         ],
         include: [
             {
@@ -80,9 +80,9 @@ router.get('/:id', (req, res) => {
         res.status(500).json(err);
       });
   });
-  
+
   router.post('/', withAuth, (req, res) => {
- 
+
     Post.create({
       title: req.body.title,
       post_content: req.body.post_content,

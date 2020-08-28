@@ -17,9 +17,9 @@ Bicycle craigslist:
 ⦁ Possible user join
 Models
 Post Table:
-User ID, Username, Post, Email, Passwords, Products = true or false
+User ID, Username, Post, Email, Passwords, Post = true or false
 
-Product Table:
+Post Table:
 User ID, Username, Email, Buying, Selling, ZIP Code, Post, Price
 
 User Tables:
