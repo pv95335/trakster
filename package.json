@@ -1,7 +1,7 @@
 {
   "name": "trakster",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bicycle craigslist:\r •\tBuyer and seller\r •\tUsers can create their own blogs\r •\tUsers can create their own posts\r •\tUsers can search for who is buying a particular bike and who is selling a bike\r •\tUsers can possibly PM\r •\tUsers can use email the buyer or seller\r •\tComments on post can\r •\tSeperate button for Buying and Selling\r •\tPrice as well???\r •\tLocation ZIP code\r •\tFilter results by ZIP code\r •\tPossible meetup feature\r •\tPossible user join\r Models\r Post Table:\r User ID, Username, Post, Email, Passwords, Products = true or false",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,8 +19,16 @@
   },
   "homepage": "https://github.com/pv95335/trakster#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^7.0.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "handlebars": "^4.7.6",
+    "express-handlebars": "^5.1.0",
+    "express-session": "^1.17.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "node.js": "0.0.1-security",
+    "path": "^0.12.7",
     "sequelize": "^6.3.4"
   }
 }
