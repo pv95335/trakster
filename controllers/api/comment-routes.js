@@ -12,6 +12,8 @@ router.get('/', (req, res) => {
                 .json(err);
         });
 });
+
+
 router.post('/', withAuth, (req, res) => {
     // check the session
     if (req.session) {
@@ -31,7 +33,7 @@ router.post('/', withAuth, (req, res) => {
 router.delete('/:id', withAuth, (req, res) => {
     Comment.destroy({
         where: {
-            id: read.param.id
+            id: req.params.id
         }
     })
         .then(dbCommentData => {
@@ -47,8 +49,32 @@ router.delete('/:id', withAuth, (req, res) => {
         });
 });
 
-
-
+router.get('/:id', (req, res) => {
+    Comment.findOne({
+        where: {
+            id: req.params.id
+        },
+        attributes: [
+            'id',
+            'comment_text',
+            'user_id',
+            'post_id',
+            'created_at',
+            'updated_at'
+        ] 
+    })
+    .then(dbCommentData => {
+        if (!dbCommentData) {
+          res.status(404).json({ message: 'No comment found' });
+          return;
+        }
+        res.json(dbCommentData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
 
 
 
