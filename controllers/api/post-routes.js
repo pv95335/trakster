@@ -88,6 +88,7 @@ router.get('/:id', (req, res) => {
       post_content: req.body.post_content,
       area: req.body.area,
       price: req.body.price,
+      post_type: req.body.post_type,
       user_id: req.session.user_id
     })
       .then(dbPostData => res.json(dbPostData))

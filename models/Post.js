@@ -25,7 +25,7 @@ Post.init(
             },
           post_type: {
                 type: DataTypes.STRING,
-                allowNull: false
+                allowNull: true
             },
         price: {
             type: DataTypes.DECIMAL,
