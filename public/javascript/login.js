@@ -1,9 +1,7 @@
 async function loginFormHandler(event) {
-    event.preventDefault();
-
-    const email = document.querySelector('#').value.trim();
-    const password = document.querySelector('#').value.trim();
-  
+    // event.preventDefault();
+    const email = document.querySelector('#logemail').value.trim();
+    const password = document.querySelector('#logpassword').value.trim();
     if (email && password) {
         const response = await fetch('/api/users/login', {
           method: 'post',
@@ -13,15 +11,20 @@ async function loginFormHandler(event) {
           }),
           headers: { 'Content-Type': 'application/json' }
         });
+
+        console.log('Response ::::::::::::::: '+JSON.stringify(response));
         if (response.ok) {
-            document.location.replace('/');
+          console.log('Response ::::::::::::::: '+JSON.stringify(response));
+         document.querySelector('#isloggedIn').value='true';
+          // document.location.replace('/');
+          
           } else {
             alert(response.statusText);
-          }
+          } 
         }
       }
       
-      document.querySelector('#').addEventListener('submit', loginFormHandler);
+      document.querySelector('#loginbtn').addEventListener('submit', loginFormHandler);
       
       
       
