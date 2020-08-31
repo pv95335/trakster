@@ -1,10 +1,10 @@
 async function signupFormHandler(event) {
-    event.preventDefault();
+    // event.preventDefault();
 
  
-    const username = document.querySelector('#').value.trim();
-    const email = document.querySelector('#').value.trim();
-    const password = document.querySelector('#').value.trim();
+    const username = document.querySelector('#username-signup').value.trim();
+    const email = document.querySelector('#email-signup').value.trim();
+    const password = document.querySelector('#password-signup').value.trim();
 console.log(username);
 console.log(email);
 console.log(password);
@@ -20,11 +20,11 @@ console.log(password);
         });
         if (response.ok) {
             console.log('added');
-            document.location.replace('/home');
+            document.location.replace('/');
         } else {
             alert(response.statusText);
         }
     }
 }
  
-document.querySelector('#').addEventListener('submit', signupFormHandler);        
+document.querySelector('#signup-btn').addEventListener('submit', signupFormHandler);        
