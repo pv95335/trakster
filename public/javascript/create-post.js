@@ -1,17 +1,24 @@
 async function newFormHandler(event) {
-    event.preventDefault();
+    // event.preventDefault();
 
-    const title = document.querySelector('input[name="#"]').value;
-    const post_content = document.querySelector('input[name="#"]').value;
-    const price = document.querySelector('input[name="#"]').value;
-    const area = document.querySelector('input[name="#"]').value;
+    const title = document.querySelector('#post-title').value;
+    const post_content = document.querySelector('#post-content').value;
+    const price = document.querySelector('#post-price').value;
+    const area = document.querySelector('#post-area').value;
+    const  post_type = document.querySelector('#post-type').value;
+   console.log(title);
+   console.log(post_content);
+   console.log(price);
+    console.log(area);
+    console.log(post_type)
     const response = await fetch(`/api/posts`, {
         method: 'POST',
         body: JSON.stringify({
             title,
             post_content,
             price,
-            area
+            area,
+            post_type
         }),
         headers: {
             'Content-Type': 'application/json'
@@ -19,11 +26,12 @@ async function newFormHandler(event) {
     });
 
     if (response.ok) {
-        document.location.replace('/home');
+        console.log('added');
+        document.location.replace('/');
     } else {
         alert(response.statusText);
     }
 }
 
 
-    document.querySelector('#').addEventListener('#', newFormHandler);
+    document.querySelector('#newpost-btn').addEventListener('submit', newFormHandler);
