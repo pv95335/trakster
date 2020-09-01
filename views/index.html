@@ -125,8 +125,28 @@
 			</div>
 			<!-- this is for Listing -->
 			<div id="listing">
-			
-			</div>
+                <div class="col-8">
+                    <input class="post-title" placeholder="post Title" maxlength="28" type="text">
+                    <textarea class="post-textarea" placeholder="post Text"></textarea>
+                  </div>
+            </div>
+            <div class="icons">
+                <i class="fas fa-save text-light save-post"></i>
+                <i class="fas fa-pen text-light new-post"></i>
+              </div>
+            </nav>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-4 list-container">
+                  <div class="card">
+                    <ul class="list-group">
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <input class="post-title" placeholder="post Title" maxlength="28" type="text">
+                  <textarea class="post-textarea" placeholder="post Text"></textarea>
+                </div>
 		</div>
 	</div>
 	</div>
@@ -134,7 +154,8 @@
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
 	<script src="/javascript/login.js"></script>
-	<script src="/javascript/signup.js"></script>
+    <script src="/javascript/signup.js"></script>
+    <script src="/javascript/get-posts.js"></script>
 	<!-- <script src="/javascript/logout.js"></script> -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
 		crossorigin="anonymous"></script>
@@ -168,12 +189,7 @@
 				$('#listing').hide()
 			}
 
-			//var text_val = $('#isloggedIn').val();
-			//if (text_val === '') {
-			//	console.log(' Sign in is Enable');
-			//} else {
-			//	console.log(' Sign out is enable');
-			//}
+		
 		});
 
 	// 	funciton fillPost(){
@@ -190,8 +206,37 @@
     // return false;
     // });
 // });
-// 			// Caling handler you will get List of Post  so Post[]
-				// 	for(var i =1; i<= 10; i++){ // Iterating post length
+// var $postList = $(".list-container .list-group");
+
+// 			var renderPostList = function(post) {
+//                 $postList.empty();
+
+//                 var postListItems = [];
+
+//                 for (var i = 0; i < post.length; i++) {
+//                 var post = posts [i];
+//                 var $li = $("<li class='list-group-item'>").data(post);
+//                  var $span = $("<span>").text(post.title);
+//                  var $delBtn = $(
+//       "<i class='fas fa-trash-alt float-right text-danger delete-post'>"
+//     );
+
+//     $li.append($span, $delBtn);
+//     postListItems.push($li);
+//             }
+
+//             $postList.append(postListItems);
+//         };
+//         var getAndRenderPost = function() {
+//             return getPost().then(function(data) {
+//                 renderPostList(data);
+//             });
+//         };
+//         $postList.on("click", ".list-group-item", handlePostView);
+//         $postList.on("click", ".delete-post", handlePostDelete);
+// $postTitle.on("keyup", handleRenderSaveBtn);
+// $postText.on("keyup", handleRenderSaveBtn);        
+        // 	for(var i =1; i<= 10; i++){ // Iterating post length
 				// 		// post.id 
 				// 		$('#listing').append(
 				// '<div class="card mb-6"><header class="card-header card-header-title has-background-grey-lighter"><div class="column"> <p class=" has-text-primary-light"></p><a href="/post/{{id}}"  class="has-text-black is-capitalized is-pulled-left">'
