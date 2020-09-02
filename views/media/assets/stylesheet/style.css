@@ -1,0 +1,37 @@
+/*colors
+#Ebecf1 off white
+#206a5d green
+#1f4068 navy blue
+#1b1c25 black */
+
+
+.navbar {
+    background-color: #1B1C25;
+}
+.btn{
+    background-color: #1f4068 ;
+  
+}
+.jumbotron{
+    background-color: #206a5d;
+   text-align: center;
+   border-style: solid;
+   border-color: aliceblue;
+   border-width: 10px;
+   text-shadow:0 0 8px #1b1c25; 
+   color:#Ebecf1;
+}
+.logo{
+  padding-left: 5px;
+  padding-right: 28px;
+}
+
+.video{
+    display: flex;
+margin-left: 35%;
+
+}
+
+body{
+    background-color: #1f4068;
+}
