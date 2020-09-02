@@ -1,6 +1,6 @@
 # trakster
 
-Quick Note
+Quick post
 Bicycle craigslist:
 ⦁ Buyer and seller
 ⦁ Users can create their own blogs

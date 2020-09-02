@@ -171,24 +171,23 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
-                    var isLogged = localStorage.getItem("logged")
+            var isLogged = localStorage.getItem("logged")
 
-                    $("#logoutButton").click(function() {
-                        localStorage.removeItem("logged")
-                        $("#logoutButton").hide()
-                        $("#navbarDropdown").show()
-                        $("#createsec").hide()
-                        $("#signUp").show()
-                    });
-                    if (isLogged) {
-                        $("#logoutButton").show()
-                        $("#createsec").show()
-                        $("#navbarDropdown").hide()
-                        $("#signUp").hide()
-                        $('#listing').show()
-
-                        <
-                        script src = "/javascript/login.js" >
+            $("#logoutButton").click(function() {
+                localStorage.removeItem("logged")
+                $("#logoutButton").hide()
+                $("#navbarDropdown").show()
+                $("#createsec").hide()
+                $("#signUp").show()
+            });
+            if (isLogged) {
+                $("#logoutButton").show()
+                $("#createsec").show()
+                $("#navbarDropdown").hide()
+                $("#signUp").hide()
+                $('#listing').show()
+            }
+        })
     </script>
     <script src="/javascript/signup.js"></script>
     <!-- <script src="/javascript/logout.js"></script> -->
