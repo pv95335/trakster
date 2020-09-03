@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link rel="stylesheet" href="media/assets/stylesheet/style.css">
 
@@ -21,8 +21,9 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="navbar-brand"></div>
-            <img class="logo" src="media/assets/TraksterLogo.png" height="50" width="162"></img>
+           <a class="navbar-brand" href="#">
+            <img src="./media/assets/logo2.png" width="300" height="auto" alt="logo" loading="lazy">
+           </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -73,6 +74,7 @@
                             Listing</a>
                     </li>
                 </ul>
+                <!---
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -82,6 +84,7 @@
                         Notifications <span class="badge badge-light"></span>
                     </button>
                 </div>
+            -->
             </div>
         </nav>
     </header>
@@ -158,9 +161,6 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- <script src="/javascript/create-post.js"></script> -->
-    <script src="../public/javascript/login.js"></script>
-    <script src="../public/javascript/signup.js"></script>
-    <script src="../public/javascript/get-posts.js"></script>
     <!-- <script src="/javascript/logout.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -171,6 +171,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+    <script src="./javascript/login.js"></script>
+    <script src="./javascript/signup.js"></script>
+    <script src="./javascript/get-posts.js"></script>
     <script>
         $(document).ready(function () {
             var isLogged = localStorage.getItem("logged")
