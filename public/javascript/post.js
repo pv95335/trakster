@@ -30,8 +30,9 @@ async function getPost() {
           <b>${post.User.username}</b> | ${ post.created_at.substr(0,10)} | Zip ${ post.area} | ${post.Comments.length}
             ${post.Comments.length > 1 ? "comments" : "comment" }
         </div>
-
-      </div>
+	
+	  </div>
+	  <button type="button" class="button is-danger delete-post-btn">Delete</button>
     </div>`
 
 		$("#post").html(body)
