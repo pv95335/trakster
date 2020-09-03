@@ -6,20 +6,21 @@
 
 
 .navbar {
-    background-color: #1B1C25;
+    background-color: #393e46;
 }
 .btn{
-    background-color: #1f4068 ;
+    background-color: #393e46 ;
   
 }
 .jumbotron{
-    background-color: #206a5d;
+    background-color: #eeeeee;
    text-align: center;
    border-style: solid;
-   border-color: aliceblue;
+   border-color: #393e46;
    border-width: 10px;
-   text-shadow:0 0 8px #1b1c25; 
-   color:#Ebecf1;
+   text-shadow:0 0 0px #1b1c25; 
+   
+   color:#222831;
 }
 .logo{
   padding-left: 5px;
@@ -33,5 +34,5 @@ margin-left: 35%;
 }
 
 body{
-    background-color: #1f4068;
+    background-color: #32e0c4;
 }

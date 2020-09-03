@@ -8,18 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="media/assets/stylesheet/style.css">
+    <link rel=icon href="views\media\assets\favicon.png" sizes="32x32" />
     <title>Trakster</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="navbar-brand"></div>
             <img class="logo" src="media/assets/TraksterLogo.png" height="50" width="162"></img>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
@@ -27,17 +31,19 @@
                         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Sign in
-						</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sign in
+                        </a>
                         <a class="nav-link" role="button" id="logoutButton">
-							Sign out
-						</a>
+                            Sign out
+                        </a>
                         <div class="dropdown-menu">
                             <form class="px-4 py-3">
                                 <div class="form-group">
                                     <label for="exampleDropdownFormEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="logemail" placeholder="email@example.com">
+                                    <input type="email" class="form-control" id="logemail"
+                                        placeholder="email@example.com">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleDropdownFormPassword1">Password</label>
@@ -47,21 +53,21 @@
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="dropdownCheck">
                                         <label class="form-check-label" for="dropdownCheck">
-											Remember me
-										</label>
+                                            Remember me
+                                        </label>
                                     </div>
                                 </div>
-                                <button type="submit" id="loginbtn" class="btn btn-primary" onclick="loginFormHandler(this)">Sign in</button>
+                                <button type="submit" id="loginbtn" class="btn btn-primary"
+                                    onclick="loginFormHandler(this)">Sign in</button>
                             </form>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">New around here? Sign up</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="./create-post.html" id="createsec" tabindex="-1" aria-disabled="false">Create Listing</a>
+                        <a href="./create-post.html" id="createsec" tabindex="-1" aria-disabled="false">Create
+                            Listing</a>
                     </li>
-
-
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -69,12 +75,13 @@
                 </form>
                 <div>
                     <button type="button" class="btn btn-primary">
-						Notifications <span class="badge badge-light"></span>
-					</button>
+                        Notifications <span class="badge badge-light"></span>
+                    </button>
                 </div>
             </div>
         </nav>
     </header>
+
     <video class="video" width="560" height="315" muted autoplay>
         <source src="media/assets/bike.mp4" type="video/mp4">
     </video>
@@ -92,9 +99,10 @@
                 <!-- <input type="text" class="form-control" id="isloggedIn" > -->
                 <div class="btn-group" role="group">
                     <p>
-                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-							Sign up!
-						</button>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse"
+                            data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            Sign up!
+                        </button>
                     </p>
                     <div class="collapse" id="collapseExample">
                         <form>
@@ -109,174 +117,87 @@
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="email-signup-label"></label>
-                                    <input type="email" class="form-control" id="email-signup" placeholder="email@example.com">
+                                    <input type="email" class="form-control" id="email-signup"
+                                        placeholder="email@example.com">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="password-signup-label"></label>
-                                    <input type="password" class="form-control" id="password-signup" placeholder="Password">
+                                    <input type="password" class="form-control" id="password-signup"
+                                        placeholder="Password">
                                 </div>
                             </div>
-                            <input class="btn btn-primary" type="submit" id="signup-btn" onclick="signupFormHandler(this)" value="Submit">
+                            <input class="btn btn-primary" type="submit" id="signup-btn"
+                                onclick="signupFormHandler(this)" value="Submit">
                         </form>
                     </div>
 
                 </div>
             </div>
+        
             <!-- this is for Listing -->
-            <div id="listing">
-                <!-- <div class="col-8">
-                    <input class="post-title" placeholder="post Title" maxlength="28" type="text">
-                    <textarea class="post-textarea" placeholder="post Text"></textarea>
-                </div> -->
+            <div id="posts">
+               
             </div>
-            <!-- <div class="icons">
-                <i class="fas fa-save text-light save-post"></i>
-                <i class="fas fa-pen text-light new-post"></i>
-            </div> -->
-            </nav>
-            <!-- <div class="container-fluid">
-                <div class="row">
-                    <div class="col-4 list-container">
-                        <div class="card">
-                            <ul class="list-group">
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <input class="post-title" placeholder="post Title" maxlength="28" type="text">
-                        <textarea class="post-textarea" placeholder="post Text"></textarea>
-                    </div>
-                </div>
-            </div> -->
         </div>
+       
 
-        <div class="card mb-3" id="listing">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
+        <!-- <div class="card mb-3" id="listing"> -->
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <!-- <div class="card-body">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
-        </div>
+        </div> -->
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
+    <!-- <script src="/javascript/create-post.js"></script> -->
     <script src="/javascript/login.js"></script>
-    <script src="/javascript/signup.js"></script>
-    <script src="/javascript/get-posts.js"></script>
+	<script src="/javascript/signup.js"></script>
+	<script src="/javascript/get-posts.js"></script>
     <!-- <script src="/javascript/logout.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function() {
-            var isLogged = localStorage.getItem("logged")
-
-            $("#logoutButton").click(function() {
-                localStorage.removeItem("logged")
-                $("#logoutButton").hide()
-                $("#navbarDropdown").show()
-                $("#createsec").hide()
-                $("#signUp").show()
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function () {
+                var isLogged = localStorage.getItem("logged")
+    
+                function logout() {
+                    $("#logoutButton").hide()
+                    $("#navbarDropdown").show()
+                    $("#createsec").hide()
+                    $("#signUp").show()
+                    $("#posts").hide()
+                }
+    
+                function login() {
+                    $("#logoutButton").show()
+                    $("#createsec").show()
+                    $("#navbarDropdown").hide()
+                    $("#signUp").hide()
+                }
+    
+                $("#logoutButton").click(function () {
+                    localStorage.removeItem("logged")
+                    logout()
+                });
+                if (isLogged) {
+                    login()
+                } else {
+                    logout()
+                }
             });
-            if (isLogged) {
-                $("#logoutButton").show()
-                $("#createsec").show()
-                $("#navbarDropdown").hide()
-                $("#signUp").hide()
-                $('#listing').show()
-            }
-        })
     </script>
-    <script src="/javascript/signup.js"></script>
-    <!-- <script src="/javascript/logout.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function() {
-            var text_val = $('#isloggedIn').val();
-            if (text_val === '') {
-                console.log(' Sign in is Enable');
-
-            } else {
-                $("#logoutButton").hide()
-                $("#createsec").hide()
-                $("#navbarDropdown").show()
-                $("#signUp").show()
-                $('#listing').hide()
-            }
-
-
-        });
-
-        // 	funciton fillPost(){
-
-        // 		$(document).ready(function(){
-        //     $("#submit").click(function(){
-        //     $.ajax({
-        //         type: 'GET',
-        //         url: "http://localhost/page1.html",
-        //         success:function(data){
-        //          alert(data);
-        //         }
-        //     });
-        // return false;
-        // });
-        // });
-        // var $postList = $(".list-container .list-group");
-
-        // 			var renderPostList = function(post) {
-        //                 $postList.empty();
-
-        //                 var postListItems = [];
-
-        //                 for (var i = 0; i < post.length; i++) {
-        //                 var post = posts [i];
-        //                 var $li = $("<li class='list-group-item'>").data(post);
-        //                  var $span = $("<span>").text(post.title);
-        //                  var $delBtn = $(
-        //       "<i class='fas fa-trash-alt float-right text-danger delete-post'>"
-        //     );
-
-        //     $li.append($span, $delBtn);
-        //     postListItems.push($li);
-        //             }
-
-        //             $postList.append(postListItems);
-        //         };
-        //         var getAndRenderPost = function() {
-        //             return getPost().then(function(data) {
-        //                 renderPostList(data);
-        //             });
-        //         };
-        //         $postList.on("click", ".list-group-item", handlePostView);
-        //         $postList.on("click", ".delete-post", handlePostDelete);
-        // $postTitle.on("keyup", handleRenderSaveBtn);
-        // $postText.on("keyup", handleRenderSaveBtn);        
-        // 	for(var i =1; i<= 10; i++){ // Iterating post length
-        // 		// post.id 
-        // 		$('#listing').append(
-        // '<div class="card mb-6"><header class="card-header card-header-title has-background-grey-lighter"><div class="column"> <p class=" has-text-primary-light"></p><a href="/post/{{id}}"  class="has-text-black is-capitalized is-pulled-left">'
-        // 				+post[i].title+
-        // 			'</a></p></div><div class="column"><span class=""> </span></div></header><div class="card-content"><div class="content has-text-justified">'+
-        // 				+post[i].comment+
-        // 			'</div><div class="is-pulled-right">'+
-        // 		'<b>'+post[i].username+'</b> | '+post[i].createdDate+' | <a href="/post/'+post[i].id+' "> Comments'
-        // 			+post[i].username+
-        // 		'</div></div>'
-        // 			)
-        // 	}
-        // }
-    </script>
+   	</script>
 </body>
-<!-- Bootstrap CSS -->
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
 
 </html>
