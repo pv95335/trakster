@@ -34,5 +34,11 @@ margin-left: 35%;
 }
 
 body{
-    background-color: #32e0c4;
+    background-color:#1f4068;
 }
+
+.btn-primary {
+    margin-left: 17px;
+}
+.btn-outline-success{
+    margin-left: 12px;
