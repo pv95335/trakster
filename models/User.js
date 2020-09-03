@@ -9,7 +9,6 @@ checkPassword(loginPw) {
     return bcrypt.compare(loginPw, this.password);
   }
 }
-
 User.init(
     {
         id: {

@@ -14,6 +14,7 @@ async function loginFormHandler(e) {
 			}
 		});
 
+		// console.log('Response ::::::::::::::: ' + JSON.stringify(response));
 		if (response.ok) {
 			localStorage.setItem("logged", true)
 			console.log("logged");
@@ -21,6 +22,9 @@ async function loginFormHandler(e) {
 			$("#navbarDropdown").hide()
 			$("#createsec").show()
 			$("#signUp").hide()
+			// const responseBody = await response.json();
+			// document.querySelector('#isloggedIn').value = 'true';
+			// document.location.replace('/');
 
 		} else {
 			alert(response.statusText);
