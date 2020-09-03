@@ -32,7 +32,7 @@ async function getPost() {
         </div>
 	
 	  </div>
-	  <button type="button" class="button is-danger delete-post-btn">Delete</button>
+	
     </div>`
 
 		$("#post").html(body)
