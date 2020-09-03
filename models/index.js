@@ -1,7 +1,9 @@
 const User = require('./User');
-const Post = require('./post');
+const Post = require('./Post');
 const Comment = require('./Comment');
-const { exit } = require('process');
+const {
+	exit
+} = require('process');
 
 User.hasMany(Post);
 
@@ -15,4 +17,8 @@ User.hasMany(Comment);
 
 Post.hasMany(Comment);
 
-module.exports = { User, Post, Comment };
+module.exports = {
+	User,
+	Post,
+	Comment
+};
