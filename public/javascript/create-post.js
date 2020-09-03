@@ -11,7 +11,7 @@ async function newFormHandler(event) {
 	console.log(price);
 	console.log(area);
 	console.log(post_type)
-	const response = await fetch(`/api/posts`, {
+	const response = await fetch('/api/posts', {
 		method: 'POST',
 		body: JSON.stringify({
 			title,
