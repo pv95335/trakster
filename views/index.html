@@ -65,7 +65,8 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="./create-post.html" id="createsec" tabindex="-1" aria-disabled="false">Create
+                        <a class="nav-link" href="./create-post.html" id="createsec" tabindex="-1"
+                            aria-disabled="false">Create
                             Listing</a>
                     </li>
                 </ul>
@@ -133,17 +134,17 @@
 
                 </div>
             </div>
-        
+
             <!-- this is for Listing -->
             <div id="posts">
-               
+
             </div>
         </div>
-       
+
 
         <!-- <div class="card mb-3" id="listing"> -->
-            <!-- <img src="..." class="card-img-top" alt="..."> -->
-            <!-- <div class="card-body">
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <!-- <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
                     content. This content is a little bit longer.</p>
@@ -155,8 +156,8 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- <script src="/javascript/create-post.js"></script> -->
     <script src="/javascript/login.js"></script>
-	<script src="/javascript/signup.js"></script>
-	<script src="/javascript/get-posts.js"></script>
+    <script src="/javascript/signup.js"></script>
+    <script src="/javascript/get-posts.js"></script>
     <!-- <script src="/javascript/logout.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -167,37 +168,37 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-        <script>
-            $(document).ready(function () {
-                var isLogged = localStorage.getItem("logged")
-    
-                function logout() {
-                    $("#logoutButton").hide()
-                    $("#navbarDropdown").show()
-                    $("#createsec").hide()
-                    $("#signUp").show()
-                    $("#posts").hide()
-                }
-    
-                function login() {
-                    $("#logoutButton").show()
-                    $("#createsec").show()
-                    $("#navbarDropdown").hide()
-                    $("#signUp").hide()
-                }
-    
-                $("#logoutButton").click(function () {
-                    localStorage.removeItem("logged")
-                    logout()
-                });
-                if (isLogged) {
-                    login()
-                } else {
-                    logout()
-                }
+    <script>
+        $(document).ready(function () {
+            var isLogged = localStorage.getItem("logged")
+
+            function logout() {
+                $("#logoutButton").hide()
+                $("#navbarDropdown").show()
+                $("#createsec").hide()
+                $("#signUp").show()
+                $("#posts").hide()
+            }
+
+            function login() {
+                $("#logoutButton").show()
+                $("#createsec").show()
+                $("#navbarDropdown").hide()
+                $("#signUp").hide()
+            }
+
+            $("#logoutButton").click(function () {
+                localStorage.removeItem("logged")
+                logout()
             });
+            if (isLogged) {
+                login()
+            } else {
+                logout()
+            }
+        });
     </script>
-   	</script>
+    </script>
 </body>
 
 </html>
