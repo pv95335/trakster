@@ -35,3 +35,10 @@ margin-left: 35%;
 body{
     background-color: #1f4068;
 }
+
+.btn-primary {
+    margin-left: 17px;
+}
+.btn-outline-success{
+    margin-left: 12px;
+}
