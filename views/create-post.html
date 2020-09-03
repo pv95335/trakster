@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="media/assets/stylesheet/style.css">
-    <title>Trakster</title>
+    <title>Trakster Create Listing</title>
 </head>
 
 <body>
@@ -74,8 +74,36 @@
             </div>
         </nav>
     </header>
+
+
     <section>
-        <h2 class="title">New Listing</h2>
+        <form>
+            <div class="form-group">
+                <label for="formGroupExampleInput">Listing Title</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Listing Title">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Image</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Listing Content</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Tell us about what you're selling!">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                        <span class="input-group-text">0.00</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip" placeholder="Postal Code">
+                </div>
+            </form>
+            <!-- <h2 class="title">New Listing</h2>
         <hr>
 
         <form id="createPost" class="new-post-form">
@@ -92,7 +120,7 @@
             <div>
                 <!-- <label for="post-area">Zip Code:</label>
                 <input class="textarea is-large" id="post-area" name="post-area" placeholder="Zip code" /> -->
-                <form class="needs-validation" id="post-area" novalidate>
+            <!-- <form class="needs-validation" id="post-area" novalidate>
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <div class="col-md-3 mb-3">
@@ -110,13 +138,11 @@
                     <label for="post-price">Price:</label>
                     <input class="textarea is-large" id="post-price" name="post-price" placeholder="price" />
                 </div>
-                <div>
-                    <label for="post-type">Add Type:</label>
-                    <input class="textarea is-large" id="post-type" name="post-type" placeholder="buy or sell" />
-                </div>
+                
 
                 <button type="submit" class="button is-success is-pulled-right" id="newpost-btn" onclick="newFormHandler(this)" value="Submit">Create post</button>
-        </form>
+        </form> -->
+
     </section>
 
     <script src="/javascript/create-post.js"></script>
