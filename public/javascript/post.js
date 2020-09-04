@@ -30,8 +30,9 @@ async function getPost() {
           <b>${post.User.username}</b> | ${ post.created_at.substr(0,10)} | Zip ${ post.area} | ${post.Comments.length}
             ${post.Comments.length > 1 ? "comments" : "comment" }
         </div>
-
-      </div>
+	
+	  </div>
+	
     </div>`
 
 		$("#post").html(body)
