@@ -1,41 +1,57 @@
-# trakster
 
-Quick post
-Bicycle craigslist:
-⦁ Buyer and seller
-⦁ Users can create their own blogs
-⦁ Users can create their own posts
-⦁ Users can search for who is buying a particular bike and who is selling a bike
-⦁ Users can possibly PM
-⦁ Users can use email the buyer or seller
-⦁ Comments on post can
-⦁ Seperate button for Buying and Selling
-⦁ Price as well???
-⦁ Location ZIP code
-⦁ Filter results by ZIP code
-⦁ Possible meetup feature
-⦁ Possible user join
-Models
-Post Table:
-User ID, Username, Post, Email, Passwords, Post = true or false
+  #  Trakster 
+  
+  
+ ![MIT](https://img.shields.io/badge/license-MIT-yellow.svg) 
+  
+  
+  ## Description
+    Trakster! A interactive and user input responsive online bicycle trading platform.  It’s the one place where you can meet and make Cycling friends to organize rides, as well as buy, sell, and trade Cycling Equipment and Apparel to the Global Cycling Community. As a user you can sign up, log in and log out. as well as make or delite your own post as well as view posts made by other users. 
+    
+  ## Table of Contents
+  * [Installation](#installation)
+  * [Demo](#Demo)
+  * [Usage](#usage)
+  * [Credits](#credits)
+  * [License](#license)
+  * [Technology](#technology)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  
+   ## Installation
+     Steps to install the program are: npm init -y npm install
+ 
+   
+  ## Usage
+  Example and instrution of use: Create a .env file with your mysql username and password; Use trakster_db for database name
 
-Post Table:
-User ID, Username, Email, Buying, Selling, ZIP Code, Post, Price
+  ## Demo
+  ![Demo](/views/media/assets/demo.png)
 
-User Tables:
-User Id, Username, Password, Email
+  [Live Heroku URL](https://murmuring-anchorage-27916.herokuapp.com/)
+ 
 
-Requirements:
-Use Node.js and Express.js to create a RESTful API
-Use a template engine, such as Handlebars.js
-Use MySQL and the Sequelize ORM for the database
-Have both GET and POST routes for retrieving and adding new data
-Be deployed using Heroku (with data)
-Have a polished UI.
-Be responsive.
-Be interactive (i.e., accept and respond to user input).
-Must have a folder structure that meets the MVC paradigm
-Must include authentication (cookies and express-session)
-Must protect API keys and sensitive information with environment variables
-Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
-Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+  [GitHub repo URL](https://github.com/pv95335/trakster) 
+  
+  ## Credits
+   Program collaborators and third party assets: pv95335; Danno26; jaaybe; jackelinsalinas44; natka58
+  
+  ## License
+  MIT
+  
+  ## Technology 
+   Technology used: Node.js and Express.js for RESTful APIs; MYSQL, Sequelize ORM; Authentication throufh express-session, cookies & bcrypt. MVC paradigm folder structure. Protected API keys and sensitive information with environment variables.
+
+  ## Tests
+   To test run the following code: No test setup 
+  
+    
+  ## Questions
+  
+ GitHub Username: \
+ https://github.com/pv95335 \
+ https://github.com/Danno26 \
+ https://github.com/jaaybe \
+ https://github.com/jackelinsalinas44 \
+ https://github.com/natka58
+

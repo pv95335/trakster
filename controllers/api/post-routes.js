@@ -82,6 +82,7 @@ router.get('/:id', (req, res) => {
   });
 
   router.post('/', withAuth, (req, res) => {
+    console.log('test line 85 post-routes')
 
     Post.create({
       title: req.body.title,
@@ -123,6 +124,7 @@ router.get('/:id', (req, res) => {
         res.status(500).json(err);
       });
   });
+
   router.delete('/:id', withAuth, (req, res) => {
     Post.destroy({
       where: {
