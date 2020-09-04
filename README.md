@@ -6,7 +6,11 @@
   
   
   ## Description
-    Trakster! A interactive and user input responsive online bicycle trading platform.  It’s the one place where you can meet and make Cycling friends to organize rides, as well as buy, sell, and trade Cycling Equipment and Apparel to the Global Cycling Community. As a user you can sign up, log in and log out. as well as make or delite your own post as well as view posts made by other users. 
+    Trakster! 
+    A interactive and user input responsive online bicycle trading platform.  
+    It’s the one place where you can meet and make Cycling friends to organize rides,
+    as well as buy, sell, and trade Cycling Equipment and Apparel to the Global Cycling Community. 
+    As a user you can sign up, log in and log out. as well as make or delite your own post as well as view posts made by other users. 
     
   ## Table of Contents
   * [Installation](#installation)
