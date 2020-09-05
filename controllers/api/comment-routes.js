@@ -3,8 +3,12 @@ const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 const { read } = require('fs');
 
-router.get('/', (req, res) => {
-    Comment.findAll()
+router.get('/:postId', (req, res) => {
+    Comment.findAll({
+        where: {
+            post_id: req.params.postId
+        }
+    })
         .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {
             console.log(err);
