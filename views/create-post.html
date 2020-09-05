@@ -26,7 +26,7 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Sign in
 						</a>
@@ -56,11 +56,10 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">New around here? Sign up</a>
                         </div>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
-                        <a href="./create-post.html" id="createsec" tabindex="-1" aria-disabled="false">Create Listing</a>
+                        <a href="./create-post.html" class="nav-link" id="createsec" tabindex="-1" aria-disabled="false">Create Listing</a>
                     </li>
-
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -77,7 +76,7 @@
 
 
     <section>
-        <form>
+        <form class="create-listing">
             <div class="form-group">
                 <label for="formGroupExampleInput">Listing Title</label>
                 <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Listing Title">
@@ -86,46 +85,48 @@
                 <label for="exampleFormControlFile1">Image</label>
                 <input type="file" class="form-control-file" id="exampleFormControlFile1">
             </div>
-            <form>
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Listing Content</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Tell us about what you're selling!">
+            <div class="form-group">
+                <label for="formGroupExampleInput">Listing Content</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Tell us about what you're selling!">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                    <span class="input-group-text">0.00</span>
                 </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">$</span>
-                        <span class="input-group-text">0.00</span>
-                    </div>
-                    <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
-                </div>
-                <div class="form-group col-md-2">
-                    <label for="inputZip">Zip</label>
-                    <input type="text" class="form-control" id="inputZip" placeholder="Postal Code">
-                </div>
-            </form>
-            <!-- <h2 class="title">New Listing</h2>
+                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip" placeholder="Postal Code">
+            </div>
+        </form>
+        <!-- <h2 class="title">New Listing</h2>
         <hr>
 
-        <form id="createPost" class="new-post-form">
+        <form id="createPost" method="POST" class="new-post-form">
+           
             <div class="form-group">
-                <label for="post-title">Title:</label>
-                <input class="input" type="text" id="post-title" name="post-title" placeholder="insert add title here" />
+                <div>
+                    <label for="post-title">Title:</label>
+                    <input class="input" type="text" id="post-title" name="post-title" placeholder="insert add title here" />
+                </div>
             </div>
 
             <div>
-                <label for="post-content">Your add:</label>
-                <input class="textarea is-large" id="post-content" name="post-content" placeholder="insert add content here" />
-            </div>
+				<label for="post-content">Your add:</label>
+				<input class="textarea is-large" id="post-content" name="post-content" placeholder="insert add content here" />
+			</div>
 
             <div>
                 <!-- <label for="post-area">Zip Code:</label>
                 <input class="textarea is-large" id="post-area" name="post-area" placeholder="Zip code" /> -->
-            <!-- <form class="needs-validation" id="post-area" novalidate>
+        <!-- <form class="needs-validation" id="post-area" novalidate>
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <div class="col-md-3 mb-3">
-                                <label for="validationCustom05">Zip Code</label>
-                                <input type="text" class="form-control" id="validationCustom05" required>
+                                <label for="post-area">Zip Code:</label>
+                                <input type="textarea" class="form-control" id="post-area" name="post-area" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
@@ -138,16 +139,26 @@
                     <label for="post-price">Price:</label>
                     <input class="textarea is-large" id="post-price" name="post-price" placeholder="price" />
                 </div>
-                
 
-                <button type="submit" class="button is-success is-pulled-right" id="newpost-btn" onclick="newFormHandler(this)" value="Submit">Create post</button>
-        </form> -->
+                <div>
+                    <label for="post-type">Add Type:</label>
+                    <input class="textarea is-large" id="post-type" name="post-type" placeholder="buy or sell" />
+                </div>
 
+               <!-- <div>
+				<label for="post-type">Add Type:</label>
+				<input class="textarea is-large" id="post-type" name="post-type" placeholder="buy or sell" />
+			</div> -->
+
+        <button type="submit" class="button is-success is-pulled-right" id="newpost-btn" value="Submit">Create
+				post</button>
+        </form>
     </section>
 
-    <script src="/javascript/create-post.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+    <script src="/javascript/create-post.js"></script>
 </body>

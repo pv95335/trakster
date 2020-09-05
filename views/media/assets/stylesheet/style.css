@@ -4,34 +4,61 @@
 #1f4068 navy blue
 #1b1c25 black */
 
-
 .navbar {
-    background-color: #1B1C25;
-}
-.btn{
-    background-color: #1f4068 ;
-  
-}
-.jumbotron{
-    background-color: #206a5d;
-   text-align: center;
-   border-style: solid;
-   border-color: aliceblue;
-   border-width: 10px;
-   text-shadow:0 0 8px #1b1c25; 
-   color:#Ebecf1;
-}
-.logo{
-  padding-left: 5px;
-  padding-right: 28px;
+    background-color: #393e46;
 }
 
-.video{
+.btn {
+    background-color: #393e46;
+}
+
+.jumbotron {
+    background-color: #eeeeee;
+    text-align: center;
+    border-style: solid;
+    border-color: #393e46;
+    border-width: 10px;
+    text-shadow: 0 0 0px #1b1c25;
+    color: #222831;
+}
+
+.logo {
+    padding-left: 5px;
+    padding-right: 28px;
+}
+
+.video {
     display: flex;
-margin-left: 35%;
-
+    margin-left: 35%;
 }
 
-body{
+body {
     background-color: #1f4068;
+}
+
+.btn-primary {
+    margin-left: 17px;
+}
+
+.btn-outline-success {
+    margin-left: 12px;
+}
+
+.create-listing {
+    color: #206a5d;
+    border-style: solid;
+    border-color: #206a5d;
+    border-width: 2px;
+    background-color: #ebecf1;
+    align-content: center;
+    font-size: x-large;
+    font: bold;
+}
+
+.button {
+    height: 100px;
+    width: 300px;
+    text-align: center;
+    color: #206a5d;
+    font-size: 50px;
 }
