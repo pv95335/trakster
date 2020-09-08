@@ -42,3 +42,8 @@ body{
 }
 .btn-outline-success{
     margin-left: 12px;
+}
+
+.dropdown-menu {
+    min-width: 20rem;
+}

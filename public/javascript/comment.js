@@ -1,12 +1,14 @@
 async function commentFormHandler(event) {
-    event.preventDefault();
-    console.log('Click!');
+  event.preventDefault();
+  console.log('Click!');
 
-    const comment_text = document.querySelector('textarea[name="#"]').value.trim();
+  const comment_text = document.querySelector('textarea[name="comment"]').value.trim();
 
-  const post_id = window.location.toString().split('/')[
+  const post_path = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
   ];
+
+  const post_id = post_path.substring(13)
   console.log(comment_text, post_id);
   if (comment_text) {
     const response = await fetch('/api/comments', {
@@ -14,7 +16,7 @@ async function commentFormHandler(event) {
       body: JSON.stringify({
         post_id,
         comment_text
-        
+
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -29,4 +31,32 @@ async function commentFormHandler(event) {
   }
 };
 
-document.querySelector('#').addEventListener('submit', commentFormHandler);
+document.querySelector('#commentForm').addEventListener('submit', commentFormHandler);
+
+const params = new URLSearchParams(window.location.search);
+const postId = params.get('id');
+fetch('/api/comments/' + postId)
+  .then(res => res.json())
+  .then(comments => {
+    console.log(comments);
+
+    comments.forEach(comment => {
+      const comments = document.getElementById('comments');
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.style.marginTop = '10px'
+      card.innerText = 'Comment: ' + comment.comment_text;
+
+      const p = document.createElement('p');
+      p.innerText = 'Post Date: ' + comment.createdAt.substring(0, 10);
+      card.append(p)
+      comments.append(card);
+      /*const p = document.createElement('p');
+      p.innerText = comment.comment_text;
+      const p2 = document.createElement('p');
+      p2.innerText = 'Post Date: ' + comment.createdAt;
+      
+      comments.append(p);
+      comments.append(p2);*/
+    });
+  });
