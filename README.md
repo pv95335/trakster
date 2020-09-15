@@ -32,7 +32,7 @@
   ## Demo
   ![Demo](/views/media/assets/demo.png)
 
-  [Live Heroku URL](https://murmuring-anchorage-27916.herokuapp.com/)
+  [Live Heroku URL](https://project-trakster.herokuapp.com/)
  
 
   [GitHub repo URL](https://github.com/pv95335/trakster) 
